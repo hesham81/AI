@@ -1,33 +1,24 @@
 import nltk
 from nltk.stem.porter import PorterStemmer
 
-# Initialize the stemmer
+# Download the 'punkt_tab' resource if not already present
+nltk.download('punkt_tab')
+nltk.download("punkt")
+
 stemmer = PorterStemmer()
-# nltk.download('punkt')
 
-
-# Tokenization function
 def tokenize(sentence):
-    return nltk.word_tokenize(sentence)  # Corrected spelling
-
+  return nltk.word_tokenize(sentence)
 
 def stem(word):
-    return stemmer.stem(word.lower())
-
+ return stemmer.stem(word.lower())
 
 def bag_of_words(tokenized_sentence, all_words):
-    """
-    Creates a bag of words (one-hot encoding style) for a sentence.
-    """
-    tokenized_sentence = [stem(w) for w in tokenized_sentence]
-    bag = [1 if word in tokenized_sentence else 0 for word in all_words]
-    return bag
+  # tokenized_sentence = [stem(w) for w in tokenized_sentence]
+  pass
 
 
-# Example usage
-a = "How Long Does Shipping Take?"
-print("Original sentence:", a)
-
+a = "How Long Does  shipping take ? "
+print(a)
 a = tokenize(a)
-print("Tokenized sentence:", a)
-# print()
+print(a)
