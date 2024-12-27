@@ -3,7 +3,7 @@ from nltk.stem.porter import PorterStemmer
 
 # Initialize the stemmer
 stemmer = PorterStemmer()
-nltk.download('punkt')
+# nltk.download('punkt')
 
 
 # Tokenization function
@@ -30,3 +30,4 @@ print("Original sentence:", a)
 
 a = tokenize(a)
 print("Tokenized sentence:", a)
+# print()
